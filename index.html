@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochila Infinita de Valdrik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <h1>Mochila Infinita de Valdrik</h1>
+    <p id="painelJanela" class="painel-janela">Janela: -- x --</p>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="painel-acoes">
+      <h2>Loja - Comprar e Guardar</h2>
+
+      <form id="formularioCompra" class="formulario">
+        <label for="campoNome">Nome do item:</label>
+        <input type="text" id="campoNome" required>
+
+        <label for="campoPreco">Preço (moedas de ouro):</label>
+        <input type="number" id="campoPreco" min="0" step="0.01" required>
+
+        <label for="campoCategoria">Categoria:</label>
+        <input type="text" id="campoCategoria" placeholder="Ex: Poções" required>
+
+        <label for="campoQuantidade">Quantidade:</label>
+        <input type="number" id="campoQuantidade" min="0" required>
+
+        <label for="campoImagem">Imagem (link):</label>
+        <input type="text" id="campoImagem" placeholder="Ex: https://exemplo.com/imagem.jpg">
+
+        <button type="submit">Adicionar à Mochila</button>
+      </form>
+
+      <div class="botoes-feiticos">
+        <button type="button" id="botaoDesconto">Pechincha Arcana (-10%)</button>
+        <button type="button" id="botaoFiltroPocoes">Visão Alquímica (Poções)</button>
+        <button type="button" id="botaoMostrarTudo">Mostrar Tudo</button>
+        <button type="button" id="botaoContarOuro">Contar Ouro</button>
+      </div>
+
+      <p id="resultadoOuro" class="resultado-ouro"></p>
+    </section>
+
+    <section class="mochila">
+      <h2>Inventário de Valdrik</h2>
+      <div id="containerItens" class="grade-itens"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
